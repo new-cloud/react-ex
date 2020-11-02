@@ -14,11 +14,13 @@ import {
 import MyHeader from './components/header';
 import Hookzujian from './components/hookzujian';
 import Reduxzujina from './components/reduxzujina';
+import ReactReduxzujian from './components/reactReduxzujian';
 import MyTaber from './components/mytaber';
 import Home from './pages/home';
 import User from './pages/user/index';
 import User2 from './pages/user2';
 import { Button } from 'antd-mobile';
+
 
 function App(props) {
 	props.history.listen(link => console.log(link));
@@ -36,13 +38,14 @@ function App(props) {
 			</Switch>
 			<Hookzujian />
 			<hr/>
-			<Reduxzujina />
-			<hr/>
 			<p>ant design</p>
 			<div>
 				<Button type="primary"> 我是ant 库的btn组件 </Button>
-				<MyTaber />
+				{/* <MyTaber /> */}
 			</div>
+			<hr/>
+			<Reduxzujina />
+			<ReactReduxzujian />
 		</div>
 	);
 }

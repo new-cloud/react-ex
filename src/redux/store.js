@@ -1,4 +1,4 @@
 import { createStore } from 'redux';
-import { data } from './reducer';
+import { dataReducer } from './reducer';
 
-export const store = createStore(data);
+export const store = createStore(dataReducer);
