@@ -23,7 +23,7 @@ import { Button } from 'antd-mobile';
 
 
 function App(props) {
-	props.history.listen(link => console.log(link));
+	// props.history.listen(link => console.log(link));
 	return (
 		<div className="App">
 			<MyHeader />
@@ -36,16 +36,19 @@ function App(props) {
 				{/* 重定向 若是以上都匹配不到 直接跳首页或 其他页 */}
 				<Redirect to="/home"/>  {/* from 必须在Switch标签中才能使用 */}
 			</Switch>
-			<Hookzujian />
-			<hr/>
-			<p>ant design</p>
-			<div>
-				<Button type="primary"> 我是ant 库的btn组件 </Button>
-				{/* <MyTaber /> */}
-			</div>
-			<hr/>
-			<Reduxzujina />
-			<ReactReduxzujian />
+			{
+			// <Hookzujian />
+			// <hr/>
+			// <p>ant design</p>
+			// <div>
+			// 	<Button type="primary"> 我是ant 库的btn组件 </Button>
+			// 	{/* <MyTaber /> */}
+			// </div>
+			// <hr/>
+			// <Reduxzujina />
+			// <ReactReduxzujian />
+			}
+
 		</div>
 	);
 }
