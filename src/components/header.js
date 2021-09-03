@@ -5,7 +5,7 @@ class home extends Component {
     render() {
         return (
             <div className="headers">
-                <h2 className="P1">我是页头组件</h2>
+                <h2 className="P1">我是页头组件{this.props.headData}</h2>
             </div>
         );
     }
