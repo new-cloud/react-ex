@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import {
 	BrowserRouter as Router,
 	Switch,	 //唯一?
@@ -31,7 +31,7 @@ function App(props) {
 	}
 	return (
 		<div className="App">
-			<MyHeader headData={data.name}/>
+			{/* <MyHeader headData={data.name}/> */}
 			<Switch>
 				<Route path="/home" exact component={ Home } />
 				<Route path="/user" component={ User } />  {/*查找到第一个user路由 就不会继续向下查找*/}
