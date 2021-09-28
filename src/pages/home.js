@@ -53,10 +53,9 @@ class home extends Component {
                         Option 3
                       </Menu.Item>
                       <SubMenu key="sub1" icon={<MailOutlined />} title="Navigation One">
-                        <Menu.Item key="5">Option 5</Menu.Item>
-                        <Menu.Item key="6">Option 6</Menu.Item>
-                        <Menu.Item key="7">Option 7</Menu.Item>
-                        <Menu.Item key="8">Option 8</Menu.Item>
+						{[5, 6].map(item => {
+							return <Menu.Item key={item}>Option 1</Menu.Item>
+						})}
                       </SubMenu>
                       <SubMenu key="sub2" icon={<AppstoreOutlined />} title="Navigation Two">
                         <Menu.Item key="9">Option 9</Menu.Item>
@@ -68,7 +67,9 @@ class home extends Component {
                       </SubMenu>
                     </Menu>
                 </Sider>
-                <Content>Content</Content>
+                <Content>
+                	<Button type="primary" onClick={this.add}>Primary Button</Button>
+                </Content>
             </Layout>
         );
     }
