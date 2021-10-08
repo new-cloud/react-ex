@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Button } from 'antd';
+import Hookzujian from '../components/hookzujian';
+import Hookzujian2 from '../components/hookzujian2';
 import {
   AppstoreOutlined,
   MenuUnfoldOutlined,
@@ -16,10 +18,12 @@ const { SubMenu } = Menu;
 class home extends Component {
     constructor(props) {
         super(props)
-        this.add = this.add.bind(this);
+        // this.add = this.add.bind(this);
     }
     state = {
         collapsed: false,
+		name: 111111,
+		age: 10
     };
     
     toggleCollapsed = () => {
@@ -27,8 +31,23 @@ class home extends Component {
         collapsed: !this.state.collapsed,
       });
     };
-    add() {
-        console.log(1111)
+    add = () => {
+		this.setState({
+			age: 20
+		});
+		this.setState({
+			age: this.state.age + 10
+		});
+		// this.setState((state, props) => {
+		// 	return {
+		// 		age: 20
+		// 	}
+		// });
+		// this.setState((state, props) => {
+		// 	return {
+		// 		age: state.age + 10
+		// 	}
+		// });
     }
     render() {
         return (
@@ -68,6 +87,10 @@ class home extends Component {
                     </Menu>
                 </Sider>
                 <Content>
+					<Hookzujian></Hookzujian>
+					<Hookzujian2 add={this.add}></Hookzujian2>
+					<p>{this.state.name}</p>
+					<p>{this.state.age}</p>
                 	<Button type="primary" onClick={this.add}>Primary Button</Button>
                 </Content>
             </Layout>
